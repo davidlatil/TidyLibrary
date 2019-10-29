@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  integrationTest
+//  TidyLibrary
 //
 //  Created by David Latil on 29/10/2019.
 //  Copyright © 2019 David Latil. All rights reserved.

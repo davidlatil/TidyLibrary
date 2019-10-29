@@ -15,6 +15,10 @@
 		F30F63112367B5AC009FD0B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30F630F2367B5AC009FD0B2 /* LaunchScreen.storyboard */; };
 		F30F631C2367B5AC009FD0B2 /* integrationTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F631B2367B5AC009FD0B2 /* integrationTestTests.swift */; };
 		F30F63272367B5AC009FD0B2 /* integrationTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F63262367B5AC009FD0B2 /* integrationTestUITests.swift */; };
+		F30F63352367B5CA009FD0B2 /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F63342367B5CA009FD0B2 /* ScannerController.swift */; };
+		F3454E8F236847BE006F9A5A /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3454E8E236847BE006F9A5A /* LibraryData.swift */; };
+		F3454E9123684939006F9A5A /* AddDiscController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3454E9023684939006F9A5A /* AddDiscController.swift */; };
+		F3454E9323684C20006F9A5A /* ResultPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3454E9223684C20006F9A5A /* ResultPageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F30F63012367B5AB009FD0B2 /* integrationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = integrationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30F63012367B5AB009FD0B2 /* TidyLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TidyLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30F63042367B5AB009FD0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F30F63062367B5AB009FD0B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F30F63082367B5AB009FD0B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +47,16 @@
 		F30F630D2367B5AC009FD0B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F30F63102367B5AC009FD0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F30F63122367B5AC009FD0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F30F63172367B5AC009FD0B2 /* integrationTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = integrationTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30F63172367B5AC009FD0B2 /* TidyLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidyLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30F631B2367B5AC009FD0B2 /* integrationTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = integrationTestTests.swift; sourceTree = "<group>"; };
 		F30F631D2367B5AC009FD0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F30F63222367B5AC009FD0B2 /* integrationTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = integrationTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30F63222367B5AC009FD0B2 /* TidyLibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidyLibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30F63262367B5AC009FD0B2 /* integrationTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = integrationTestUITests.swift; sourceTree = "<group>"; };
 		F30F63282367B5AC009FD0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F30F63342367B5CA009FD0B2 /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
+		F3454E8E236847BE006F9A5A /* LibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryData.swift; sourceTree = "<group>"; };
+		F3454E9023684939006F9A5A /* AddDiscController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscController.swift; sourceTree = "<group>"; };
+		F3454E9223684C20006F9A5A /* ResultPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,9 @@
 		F30F62F82367B5AB009FD0B2 = {
 			isa = PBXGroup;
 			children = (
-				F30F63032367B5AB009FD0B2 /* integrationTest */,
-				F30F631A2367B5AC009FD0B2 /* integrationTestTests */,
-				F30F63252367B5AC009FD0B2 /* integrationTestUITests */,
+				F30F63032367B5AB009FD0B2 /* TidyLibrary */,
+				F30F631A2367B5AC009FD0B2 /* TidyLibraryTests */,
+				F30F63252367B5AC009FD0B2 /* TidyLibraryUITests */,
 				F30F63022367B5AB009FD0B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +97,14 @@
 		F30F63022367B5AB009FD0B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F30F63012367B5AB009FD0B2 /* integrationTest.app */,
-				F30F63172367B5AC009FD0B2 /* integrationTestTests.xctest */,
-				F30F63222367B5AC009FD0B2 /* integrationTestUITests.xctest */,
+				F30F63012367B5AB009FD0B2 /* TidyLibrary.app */,
+				F30F63172367B5AC009FD0B2 /* TidyLibraryTests.xctest */,
+				F30F63222367B5AC009FD0B2 /* TidyLibraryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F30F63032367B5AB009FD0B2 /* integrationTest */ = {
+		F30F63032367B5AB009FD0B2 /* TidyLibrary */ = {
 			isa = PBXGroup;
 			children = (
 				F30F63042367B5AB009FD0B2 /* AppDelegate.swift */,
@@ -106,34 +114,38 @@
 				F30F630D2367B5AC009FD0B2 /* Assets.xcassets */,
 				F30F630F2367B5AC009FD0B2 /* LaunchScreen.storyboard */,
 				F30F63122367B5AC009FD0B2 /* Info.plist */,
+				F30F63342367B5CA009FD0B2 /* ScannerController.swift */,
+				F3454E8E236847BE006F9A5A /* LibraryData.swift */,
+				F3454E9023684939006F9A5A /* AddDiscController.swift */,
+				F3454E9223684C20006F9A5A /* ResultPageController.swift */,
 			);
-			path = integrationTest;
+			path = TidyLibrary;
 			sourceTree = "<group>";
 		};
-		F30F631A2367B5AC009FD0B2 /* integrationTestTests */ = {
+		F30F631A2367B5AC009FD0B2 /* TidyLibraryTests */ = {
 			isa = PBXGroup;
 			children = (
 				F30F631B2367B5AC009FD0B2 /* integrationTestTests.swift */,
 				F30F631D2367B5AC009FD0B2 /* Info.plist */,
 			);
-			path = integrationTestTests;
+			path = TidyLibraryTests;
 			sourceTree = "<group>";
 		};
-		F30F63252367B5AC009FD0B2 /* integrationTestUITests */ = {
+		F30F63252367B5AC009FD0B2 /* TidyLibraryUITests */ = {
 			isa = PBXGroup;
 			children = (
 				F30F63262367B5AC009FD0B2 /* integrationTestUITests.swift */,
 				F30F63282367B5AC009FD0B2 /* Info.plist */,
 			);
-			path = integrationTestUITests;
+			path = TidyLibraryUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F30F63002367B5AB009FD0B2 /* integrationTest */ = {
+		F30F63002367B5AB009FD0B2 /* TidyLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F30F632B2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "integrationTest" */;
+			buildConfigurationList = F30F632B2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "TidyLibrary" */;
 			buildPhases = (
 				F30F62FD2367B5AB009FD0B2 /* Sources */,
 				F30F62FE2367B5AB009FD0B2 /* Frameworks */,
@@ -143,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = integrationTest;
+			name = TidyLibrary;
 			productName = integrationTest;
-			productReference = F30F63012367B5AB009FD0B2 /* integrationTest.app */;
+			productReference = F30F63012367B5AB009FD0B2 /* TidyLibrary.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F30F63162367B5AC009FD0B2 /* integrationTestTests */ = {
+		F30F63162367B5AC009FD0B2 /* TidyLibraryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F30F632E2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "integrationTestTests" */;
+			buildConfigurationList = F30F632E2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "TidyLibraryTests" */;
 			buildPhases = (
 				F30F63132367B5AC009FD0B2 /* Sources */,
 				F30F63142367B5AC009FD0B2 /* Frameworks */,
@@ -161,14 +173,14 @@
 			dependencies = (
 				F30F63192367B5AC009FD0B2 /* PBXTargetDependency */,
 			);
-			name = integrationTestTests;
+			name = TidyLibraryTests;
 			productName = integrationTestTests;
-			productReference = F30F63172367B5AC009FD0B2 /* integrationTestTests.xctest */;
+			productReference = F30F63172367B5AC009FD0B2 /* TidyLibraryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F30F63212367B5AC009FD0B2 /* integrationTestUITests */ = {
+		F30F63212367B5AC009FD0B2 /* TidyLibraryUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F30F63312367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "integrationTestUITests" */;
+			buildConfigurationList = F30F63312367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "TidyLibraryUITests" */;
 			buildPhases = (
 				F30F631E2367B5AC009FD0B2 /* Sources */,
 				F30F631F2367B5AC009FD0B2 /* Frameworks */,
@@ -179,9 +191,9 @@
 			dependencies = (
 				F30F63242367B5AC009FD0B2 /* PBXTargetDependency */,
 			);
-			name = integrationTestUITests;
+			name = TidyLibraryUITests;
 			productName = integrationTestUITests;
-			productReference = F30F63222367B5AC009FD0B2 /* integrationTestUITests.xctest */;
+			productReference = F30F63222367B5AC009FD0B2 /* TidyLibraryUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F30F62FC2367B5AB009FD0B2 /* Build configuration list for PBXProject "integrationTest" */;
+			buildConfigurationList = F30F62FC2367B5AB009FD0B2 /* Build configuration list for PBXProject "TidyLibrary" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +232,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F30F63002367B5AB009FD0B2 /* integrationTest */,
-				F30F63162367B5AC009FD0B2 /* integrationTestTests */,
-				F30F63212367B5AC009FD0B2 /* integrationTestUITests */,
+				F30F63002367B5AB009FD0B2 /* TidyLibrary */,
+				F30F63162367B5AC009FD0B2 /* TidyLibraryTests */,
+				F30F63212367B5AC009FD0B2 /* TidyLibraryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30F63352367B5CA009FD0B2 /* ScannerController.swift in Sources */,
+				F3454E9323684C20006F9A5A /* ResultPageController.swift in Sources */,
 				F30F63092367B5AB009FD0B2 /* ViewController.swift in Sources */,
+				F3454E9123684939006F9A5A /* AddDiscController.swift in Sources */,
 				F30F63052367B5AB009FD0B2 /* AppDelegate.swift in Sources */,
 				F30F63072367B5AB009FD0B2 /* SceneDelegate.swift in Sources */,
+				F3454E8F236847BE006F9A5A /* LibraryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +302,12 @@
 /* Begin PBXTargetDependency section */
 		F30F63192367B5AC009FD0B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F30F63002367B5AB009FD0B2 /* integrationTest */;
+			target = F30F63002367B5AB009FD0B2 /* TidyLibrary */;
 			targetProxy = F30F63182367B5AC009FD0B2 /* PBXContainerItemProxy */;
 		};
 		F30F63242367B5AC009FD0B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F30F63002367B5AB009FD0B2 /* integrationTest */;
+			target = F30F63002367B5AB009FD0B2 /* TidyLibrary */;
 			targetProxy = F30F63232367B5AC009FD0B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -435,7 +451,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = integrationTest/Info.plist;
+				DEVELOPMENT_TEAM = X55837D3SM;
+				INFOPLIST_FILE = "$(SRCROOT)/TidyLibrary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +469,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = integrationTest/Info.plist;
+				DEVELOPMENT_TEAM = X55837D3SM;
+				INFOPLIST_FILE = "$(SRCROOT)/TidyLibrary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/integrationTest.app/integrationTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TidyLibrary.app/TidyLibrary";
 			};
 			name = Debug;
 		};
@@ -502,7 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/integrationTest.app/integrationTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TidyLibrary.app/TidyLibrary";
 			};
 			name = Release;
 		};
@@ -547,7 +565,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F30F62FC2367B5AB009FD0B2 /* Build configuration list for PBXProject "integrationTest" */ = {
+		F30F62FC2367B5AB009FD0B2 /* Build configuration list for PBXProject "TidyLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F30F63292367B5AC009FD0B2 /* Debug */,
@@ -556,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F30F632B2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "integrationTest" */ = {
+		F30F632B2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "TidyLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F30F632C2367B5AC009FD0B2 /* Debug */,
@@ -565,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F30F632E2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "integrationTestTests" */ = {
+		F30F632E2367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "TidyLibraryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F30F632F2367B5AC009FD0B2 /* Debug */,
@@ -574,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F30F63312367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "integrationTestUITests" */ = {
+		F30F63312367B5AC009FD0B2 /* Build configuration list for PBXNativeTarget "TidyLibraryUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F30F63322367B5AC009FD0B2 /* Debug */,

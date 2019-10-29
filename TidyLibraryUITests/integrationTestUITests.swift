@@ -1,6 +1,6 @@
 //
-//  integrationTestUITests.swift
-//  integrationTestUITests
+//  TidyLibraryUITests.swift
+//  TidyLibraryUITests
 //
 //  Created by David Latil on 29/10/2019.
 //  Copyright © 2019 David Latil. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class integrationTestUITests: XCTestCase {
+class TidyLibraryUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

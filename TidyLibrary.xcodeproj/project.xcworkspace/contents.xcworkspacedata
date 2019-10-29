@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:integrationTest.xcodeproj">
+      location = "self:/Users/latil/Documents/XCodeFiles/integrationTest/TidyLibrary.xcodeproj">
    </FileRef>
 </Workspace>
