@@ -10,14 +10,17 @@ import AVFoundation
 import UIKit
 
 class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     var passedCode:String!
+    //purpose: 1 if when adding album, nil else
+    var purpose: Int!
     
     @IBOutlet weak var infos: UILabel!
     @IBOutlet weak var topBar: UIImageView!
+    
     override func viewDidLoad() {
-        
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
 
@@ -54,7 +57,6 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
 
         captureSession.startRunning()
         
-        
         view.bringSubviewToFront(topBar)
         view.bringSubviewToFront(infos)
     }
@@ -74,7 +76,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
             captureSession.stopRunning()
         }
     }
-
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession.stopRunning()
 
@@ -83,23 +85,32 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
             guard let stringValue = readableObject.stringValue else { return }
             passedCode=stringValue
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
+            if purpose==1{
+                performSegue(withIdentifier: "showAddConfirmation", sender: nil)
+            } else {
+                performSegue(withIdentifier: "showResults", sender: nil)
+            }
         }
-        
-    }
 
-    func found(code: String) {
-        performSegue(withIdentifier: "showResults", sender: nil)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is ResultPageController
-        {
-            let vc = segue.destination as? ResultPageController
-            vc?.code = passedCode
+        if purpose == 1{
+            print("ok")
+            if segue.destination is AddConfirmationController
+            {
+                let vc = segue.destination as? AddConfirmationController
+                vc?.code = passedCode
+            }
+        } else {
+            if segue.destination is ResultPageController
+            {
+                let vc = segue.destination as? ResultPageController
+                vc?.code = passedCode
+            }
         }
+        
     }
 
     override var prefersStatusBarHidden: Bool {

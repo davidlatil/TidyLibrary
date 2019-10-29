@@ -13,6 +13,7 @@ class AddDiscController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     var pickerData: [String] = [String]()
     
+    
     @IBOutlet weak var genrePicker: UIPickerView!
     
     @IBOutlet weak var artistTextField: UITextField!
@@ -50,5 +51,17 @@ class AddDiscController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         return false
     }
     
+    @IBSegueAction func scanner(_ coder: NSCoder) -> ScannerController? {
+        return ScannerController(coder: coder)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ScannerController
+        {
+            let vc = segue.destination as? ScannerController
+            vc?.purpose=1
+        }
+    }
 }
 

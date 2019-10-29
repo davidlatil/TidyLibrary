@@ -100,6 +100,53 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
+        <!--Add Confirmation Controller-->
+        <scene sceneID="nZI-tP-EwL">
+            <objects>
+                <viewController id="g94-uf-UEu" customClass="AddConfirmationController" customModule="TidyLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CbY-9g-QMk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jkt-Zi-dAZ">
+                                <rect key="frame" x="124.5" y="103.5" width="165" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="Auv-Xr-vEi"/>
+                                    <constraint firstAttribute="width" constant="165" id="rBT-iT-smV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L'ajout a été effectué avec succès !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJw-u7-COP">
+                                <rect key="frame" x="34.5" y="311" width="345" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4v-eX-S9h">
+                                <rect key="frame" x="60.5" y="484" width="293" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title=" Retour au menu principal" image="arrow.uturn.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="34I-Q7-nVb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jkt-Zi-dAZ" firstAttribute="centerY" secondItem="CbY-9g-QMk" secondAttribute="centerY" constant="-262" id="SKb-S4-j4T"/>
+                            <constraint firstItem="DJw-u7-COP" firstAttribute="centerX" secondItem="CbY-9g-QMk" secondAttribute="centerX" id="aHS-Xd-eLA"/>
+                            <constraint firstItem="c4v-eX-S9h" firstAttribute="centerY" secondItem="CbY-9g-QMk" secondAttribute="centerY" constant="51" id="ekE-Pj-ezt"/>
+                            <constraint firstItem="DJw-u7-COP" firstAttribute="centerY" secondItem="CbY-9g-QMk" secondAttribute="centerY" constant="-123" id="lpd-00-yty"/>
+                            <constraint firstItem="c4v-eX-S9h" firstAttribute="centerX" secondItem="CbY-9g-QMk" secondAttribute="centerX" id="mkH-iF-aUc"/>
+                            <constraint firstItem="jkt-Zi-dAZ" firstAttribute="centerX" secondItem="CbY-9g-QMk" secondAttribute="centerX" id="pxA-C1-ZWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fJO-51-Xde"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FhK-x7-QzT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Buz-Zx-6va" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="-183"/>
+        </scene>
         <!--Result Page Controller-->
         <scene sceneID="hC1-SR-YRV">
             <objects>
@@ -127,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNJ-Pb-7mZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1788.4057971014495" y="142.63392857142856"/>
+            <point key="canvasLocation" x="-586" y="-516"/>
         </scene>
         <!--Scanner Controller-->
         <scene sceneID="SWb-zo-uWg">
@@ -164,11 +211,12 @@
                         <outlet property="infos" destination="oCP-qf-Veh" id="YAZ-O1-w0r"/>
                         <outlet property="topBar" destination="MJi-6L-99V" id="gS4-qX-HOA"/>
                         <segue destination="bKw-w1-ppD" kind="presentation" identifier="showResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mg1-Ag-fqo"/>
+                        <segue destination="g94-uf-UEu" kind="presentation" identifier="showAddConfirmation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="oN9-2t-SJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsx-Bt-X8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-723.1884057971015" y="138.61607142857142"/>
+            <point key="canvasLocation" x="141" y="-516"/>
         </scene>
         <!--Add Disc Controller-->
         <scene sceneID="0TY-sl-bqc">
@@ -259,6 +307,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title=" Ajouter" image="plus.rectangle" catalog="system"/>
+                                <connections>
+                                    <segue destination="4Th-yb-oJQ" kind="show" destinationCreationSelector="scanner:" id="aEF-O7-XuA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,11 +347,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHz-5Y-5oL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-68"/>
+            <point key="canvasLocation" x="988" y="-183"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="arrow.uturn.left" catalog="system" width="64" height="56"/>
+        <image name="checkmark.circle" catalog="system" width="64" height="60"/>
         <image name="eye" catalog="system" width="64" height="40"/>
         <image name="hifispeaker" catalog="system" width="54" height="64"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
@@ -311,7 +364,8 @@
         <image name="smallcircle.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ncs-Og-ybT"/>
+        <segue reference="aEF-O7-XuA"/>
+        <segue reference="34I-Q7-nVb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

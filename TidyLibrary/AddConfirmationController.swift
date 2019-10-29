@@ -1,5 +1,5 @@
 //
-//  ResultPage.swift
+//  AddConfirmationController.swift
 //  TidyLibrary
 //
 //  Created by David Latil on 29/10/2019.
@@ -8,10 +8,13 @@
 
 import Foundation
 import UIKit
-class ResultPageController:UIViewController {
-    var code:String = ""
-    @IBOutlet weak var testResult: UILabel!
+
+class AddConfirmationController:UIViewController {
+    var code: String!
+    
     override func viewDidLoad() {
-        testResult.text=code
+        super.viewDidLoad()
+        print("ok")
     }
+    
 }
