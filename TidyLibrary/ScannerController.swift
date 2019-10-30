@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  BarcodeTest
+//  TidyLibrary
 //
 //  Created by David Latil on 28/10/2019.
 //  Copyright © 2019 David Latil. All rights reserved.
@@ -8,14 +8,18 @@
 
 import AVFoundation
 import UIKit
+import CoreData
 
 class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     var passedCode:String!
-    //purpose: 1 if when adding album, nil else
-    var purpose: Int!
+    //purpose: 1 if when adding album, 0 else
+    var purpose: Int=0
+    var passedArtist: String=""
+    var passedAlbum: String=""
+    var passedGenre: String=""
     
     @IBOutlet weak var infos: UILabel!
     @IBOutlet weak var topBar: UIImageView!
@@ -45,7 +49,6 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
             captureSession.addOutput(metadataOutput)
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417]
-            
         } else {
             fatalError("Can't retrieve data")
         }
@@ -85,7 +88,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
             guard let stringValue = readableObject.stringValue else { return }
             passedCode=stringValue
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            if purpose==1{
+            if purpose==1 {
                 performSegue(withIdentifier: "showAddConfirmation", sender: nil)
             } else {
                 performSegue(withIdentifier: "showResults", sender: nil)
@@ -94,23 +97,23 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if purpose == 1{
-            print("ok")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if purpose == 1 {
             if segue.destination is AddConfirmationController
             {
                 let vc = segue.destination as? AddConfirmationController
                 vc?.code = passedCode
+                vc?.albumE=passedAlbum
+                vc?.artist=passedArtist
+                vc?.genre=passedGenre
             }
         } else {
             if segue.destination is ResultPageController
             {
                 let vc = segue.destination as? ResultPageController
-                vc?.code = passedCode
+                vc?.searchedCode = passedCode
             }
         }
-        
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -120,4 +123,5 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
+    
 }

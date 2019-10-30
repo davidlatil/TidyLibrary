@@ -20,6 +20,8 @@
 		F3454E9123684939006F9A5A /* AddDiscController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3454E9023684939006F9A5A /* AddDiscController.swift */; };
 		F3454E9323684C20006F9A5A /* ResultPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3454E9223684C20006F9A5A /* ResultPageController.swift */; };
 		F35658572368BB6C0065C3BF /* AddConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35658562368BB6C0065C3BF /* AddConfirmationController.swift */; };
+		F356585A2368E6640065C3BF /* LibraryData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35658582368E6640065C3BF /* LibraryData.xcdatamodeld */; };
+		F356585C23699D290065C3BF /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356585B23699D290065C3BF /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		F3454E9023684939006F9A5A /* AddDiscController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscController.swift; sourceTree = "<group>"; };
 		F3454E9223684C20006F9A5A /* ResultPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPageController.swift; sourceTree = "<group>"; };
 		F35658562368BB6C0065C3BF /* AddConfirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfirmationController.swift; sourceTree = "<group>"; };
+		F35658592368E6640065C3BF /* LibraryData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LibraryData.xcdatamodel; sourceTree = "<group>"; };
+		F356585B23699D290065C3BF /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				F3454E9023684939006F9A5A /* AddDiscController.swift */,
 				F3454E9223684C20006F9A5A /* ResultPageController.swift */,
 				F35658562368BB6C0065C3BF /* AddConfirmationController.swift */,
+				F35658582368E6640065C3BF /* LibraryData.xcdatamodeld */,
+				F356585B23699D290065C3BF /* SearchController.swift */,
 			);
 			path = TidyLibrary;
 			sourceTree = "<group>";
@@ -275,12 +281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35658572368BB6C0065C3BF /* AddConfirmationController.swift in Sources */,
+				F356585C23699D290065C3BF /* SearchController.swift in Sources */,
 				F30F63352367B5CA009FD0B2 /* ScannerController.swift in Sources */,
 				F3454E9323684C20006F9A5A /* ResultPageController.swift in Sources */,
 				F30F63092367B5AB009FD0B2 /* ViewController.swift in Sources */,
 				F3454E9123684939006F9A5A /* AddDiscController.swift in Sources */,
 				F30F63052367B5AB009FD0B2 /* AppDelegate.swift in Sources */,
 				F30F63072367B5AB009FD0B2 /* SceneDelegate.swift in Sources */,
+				F356585A2368E6640065C3BF /* LibraryData.xcdatamodeld in Sources */,
 				F3454E8F236847BE006F9A5A /* LibraryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +614,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F35658582368E6640065C3BF /* LibraryData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F35658592368E6640065C3BF /* LibraryData.xcdatamodel */,
+			);
+			currentVersion = F35658592368E6640065C3BF /* LibraryData.xcdatamodel */;
+			path = LibraryData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F30F62F92367B5AB009FD0B2 /* Project object */;
 }

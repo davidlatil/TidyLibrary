@@ -61,6 +61,9 @@ class AddDiscController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         {
             let vc = segue.destination as? ScannerController
             vc?.purpose=1
+            vc?.passedAlbum=albumTextField.text!
+            vc?.passedArtist=artistTextField.text!
+            vc?.passedGenre=pickerData[genrePicker.selectedRow(inComponent: 0)]
         }
     }
 }
