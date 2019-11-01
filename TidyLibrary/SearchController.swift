@@ -10,23 +10,21 @@ import Foundation
 import UIKit
 import CoreData
 
+@available(iOS 13.0, *)
 class SearchController: UITableViewController {
     
-    var item :[Any] = []
+    var albumList = [Album]()
+    var fetchResults = [Album]()
+    
     var context : NSManagedObjectContext!
-    var locations  = [Album]()
+    var fetchRequest : NSFetchRequest<NSFetchRequestResult>!
+    
+    var dataManager : DataManager!
+    
     override func viewDidLoad(){
         super.viewDidLoad()
-        //persistant container
-        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let fetchRequest =  NSFetchRequest<NSFetchRequestResult>(entityName: "Album")
-        fetchRequest.returnsObjectsAsFaults = false
-        locations = try! context.fetch(fetchRequest) as! [Album]
-        for location in locations
-        {
-            item.append(location)
-        }
+        dataManager=DataManager()
+        albumList=dataManager.getAllAlbums()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,7 +32,7 @@ class SearchController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return item.count
+        return albumList.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -43,34 +41,17 @@ class SearchController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-        
-        cell.textLabel?.text = (item[indexPath.row] as AnyObject).name + " - " + (item[indexPath.row] as AnyObject).artist! + " - " + (item[indexPath.row] as AnyObject).genre!
-        
-        
+        let nameToDisplay = albumList[indexPath.row].name
+        let artistToDisplay = albumList[indexPath.row].artist
+        let genreToDisplay = albumList[indexPath.row].genre
+        cell.textLabel?.text = nameToDisplay! + " - " + artistToDisplay! + " - " + genreToDisplay!
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
-        print("Deleted")
-
-        
-        
-        let fetchRequest =  NSFetchRequest<NSFetchRequestResult>(entityName: "Album")
-        fetchRequest.returnsObjectsAsFaults = false
-        locations = try! context.fetch(fetchRequest) as! [Album]
-        for location in locations
-        {
-            if location.code==(item[indexPath.row] as AnyObject).code {
-                context.delete(location)
-            }
-        }
-        do {
-            try context.save()
-            
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-        self.item.remove(at: indexPath.row)
+        dataManager.deleteAlbumFromCode(targetCode : albumList[indexPath.row].code!)
+        self.albumList.remove(at: indexPath.row)
         self.tableView.deleteRows(at: [indexPath], with: .automatic)
       }
     }

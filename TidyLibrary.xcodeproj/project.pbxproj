@@ -22,6 +22,7 @@
 		F35658572368BB6C0065C3BF /* AddConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35658562368BB6C0065C3BF /* AddConfirmationController.swift */; };
 		F356585A2368E6640065C3BF /* LibraryData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35658582368E6640065C3BF /* LibraryData.xcdatamodeld */; };
 		F356585C23699D290065C3BF /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356585B23699D290065C3BF /* SearchController.swift */; };
+		F3A7AF50236BA4FD00974A81 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7AF4F236BA4FD00974A81 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F35658562368BB6C0065C3BF /* AddConfirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfirmationController.swift; sourceTree = "<group>"; };
 		F35658592368E6640065C3BF /* LibraryData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LibraryData.xcdatamodel; sourceTree = "<group>"; };
 		F356585B23699D290065C3BF /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		F3A7AF4F236BA4FD00974A81 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				F35658562368BB6C0065C3BF /* AddConfirmationController.swift */,
 				F35658582368E6640065C3BF /* LibraryData.xcdatamodeld */,
 				F356585B23699D290065C3BF /* SearchController.swift */,
+				F3A7AF4F236BA4FD00974A81 /* DataManager.swift */,
 			);
 			path = TidyLibrary;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				F3454E9123684939006F9A5A /* AddDiscController.swift in Sources */,
 				F30F63052367B5AB009FD0B2 /* AppDelegate.swift in Sources */,
 				F30F63072367B5AB009FD0B2 /* SceneDelegate.swift in Sources */,
+				F3A7AF50236BA4FD00974A81 /* DataManager.swift in Sources */,
 				F356585A2368E6640065C3BF /* LibraryData.xcdatamodeld in Sources */,
 				F3454E8F236847BE006F9A5A /* LibraryData.swift in Sources */,
 			);
@@ -465,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X55837D3SM;
 				INFOPLIST_FILE = "$(SRCROOT)/TidyLibrary/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X55837D3SM;
 				INFOPLIST_FILE = "$(SRCROOT)/TidyLibrary/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

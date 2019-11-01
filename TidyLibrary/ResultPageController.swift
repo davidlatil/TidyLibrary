@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 import CoreData
+@available(iOS 13.0, *)
 class ResultPageController:UIViewController {
     var searchedCode:String = ""
-    var item :[Any] = []
+    var albumList :[Album] = []
     var found:Bool!
     
     @IBOutlet weak var foundLabel: UILabel!
@@ -20,24 +21,10 @@ class ResultPageController:UIViewController {
     @IBOutlet weak var album: UILabel!
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var genre: UILabel!
+    
     override func viewDidLoad() {
-        found=false
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        var locations  = [Album]()
-        let fetchRequest =  NSFetchRequest<NSFetchRequestResult>(entityName: "Album")
-        fetchRequest.returnsObjectsAsFaults = false
-        locations = try! context.fetch(fetchRequest) as! [Album]
-        for location in locations
-        {
-            item.append(location)
-            if location.code==searchedCode{
-                found=true
-                resultImage.isHidden=true
-                artist.text=location.artist
-                album.text=location.name
-                genre.text=location.genre
-            }
-        }
+        var returnedAlbum : Album
+        (found, returnedAlbum) = DataManager().searchAlbum(code : searchedCode)
         
         if !found {
             foundLabel.text="Album introuvable"
@@ -45,6 +32,11 @@ class ResultPageController:UIViewController {
             artist.text="via le menu principal"
             genre.text=""
             success.isHidden=true
+        } else {
+            resultImage.isHidden=true
+            artist.text=returnedAlbum.artist
+            album.text=returnedAlbum.name
+            genre.text=returnedAlbum.genre
         }
     }
 }

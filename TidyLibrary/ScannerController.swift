@@ -5,11 +5,13 @@
 //  Created by David Latil on 28/10/2019.
 //  Copyright © 2019 David Latil. All rights reserved.
 //
+// Inspired from : https://www.hackingwithswift.com/example-code/media/how-to-scan-a-barcode by Paul Hudson
 
 import AVFoundation
 import UIKit
 import CoreData
 
+@available(iOS 13.0, *)
 class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var captureSession: AVCaptureSession!
@@ -103,7 +105,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
             {
                 let vc = segue.destination as? AddConfirmationController
                 vc?.code = passedCode
-                vc?.albumE=passedAlbum
+                vc?.name=passedAlbum
                 vc?.artist=passedArtist
                 vc?.genre=passedGenre
             }
