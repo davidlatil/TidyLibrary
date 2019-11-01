@@ -11,7 +11,6 @@ import AVFoundation
 import UIKit
 import CoreData
 
-@available(iOS 13.0, *)
 class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var captureSession: AVCaptureSession!

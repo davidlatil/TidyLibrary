@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
-@available(iOS 13.0, *)
+
 class ResultPageController:UIViewController {
     var searchedCode:String = ""
     var albumList :[Album] = []
