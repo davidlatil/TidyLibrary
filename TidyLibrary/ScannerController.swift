@@ -23,7 +23,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     var passedGenre: String=""
     
     @IBOutlet weak var infos: UILabel!
-    @IBOutlet weak var topBar: UIImageView!
+    @IBOutlet weak var viewFinder: UIImageView!
     
     override func viewDidLoad() {
         view.backgroundColor = UIColor.black
@@ -60,9 +60,9 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
         view.layer.addSublayer(previewLayer)
 
         captureSession.startRunning()
-        
-        view.bringSubviewToFront(topBar)
         view.bringSubviewToFront(infos)
+        
+        view.bringSubviewToFront(viewFinder)
     }
 
     override func viewWillAppear(_ animated: Bool) {
