@@ -67,7 +67,6 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         if (captureSession?.isRunning == false) {
             captureSession.startRunning()
         }
@@ -75,7 +74,6 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
         if (captureSession?.isRunning == true) {
             captureSession.stopRunning()
         }
@@ -115,14 +113,5 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
                 vc?.searchedCode = passedCode
             }
         }
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
-    }
-    
+    }    
 }
