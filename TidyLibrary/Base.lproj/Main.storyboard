@@ -221,9 +221,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dir-zn-3on">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dir-zn-3on">
                                 <rect key="frame" x="20" y="44" width="79" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Retour" image="arrow.left" catalog="system"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Yfx-Du-4HJ"/>
@@ -277,6 +276,8 @@
                             <constraint firstItem="tbm-ul-GGK" firstAttribute="centerX" secondItem="egw-8u-H0X" secondAttribute="centerX" id="Duo-rV-K9h"/>
                             <constraint firstItem="cqc-69-wRI" firstAttribute="centerX" secondItem="egw-8u-H0X" secondAttribute="centerX" id="HJH-8b-8yK"/>
                             <constraint firstItem="wMW-ur-mhv" firstAttribute="centerX" secondItem="egw-8u-H0X" secondAttribute="centerX" id="JcQ-Fi-q3o"/>
+                            <constraint firstItem="Dir-zn-3on" firstAttribute="centerX" secondItem="egw-8u-H0X" secondAttribute="centerX" constant="-147.5" id="NAI-pk-nqA"/>
+                            <constraint firstItem="Dir-zn-3on" firstAttribute="centerY" secondItem="egw-8u-H0X" secondAttribute="centerY" constant="-393" id="UoM-vr-11A"/>
                             <constraint firstItem="pMs-vB-dWv" firstAttribute="centerX" secondItem="egw-8u-H0X" secondAttribute="centerX" id="aaA-1S-DYa"/>
                             <constraint firstItem="cqc-69-wRI" firstAttribute="centerY" secondItem="egw-8u-H0X" secondAttribute="centerY" constant="-260" id="dKQ-h2-fwN"/>
                             <constraint firstItem="vK8-iK-QyI" firstAttribute="centerX" secondItem="egw-8u-H0X" secondAttribute="centerX" id="dyq-RA-OA2"/>
@@ -288,10 +289,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="azu-O4-uh2"/>
                     <connections>
-                        <outlet property="album" destination="dFz-g3-vnI" id="bIY-Wf-Ciy"/>
-                        <outlet property="artist" destination="wMW-ur-mhv" id="xul-m2-eoJ"/>
+                        <outlet property="albumLabel" destination="dFz-g3-vnI" id="Zpj-cd-UgX"/>
+                        <outlet property="artistLabel" destination="wMW-ur-mhv" id="cxu-H6-a2b"/>
                         <outlet property="foundLabel" destination="pMs-vB-dWv" id="MsS-y7-CAp"/>
-                        <outlet property="genre" destination="tbm-ul-GGK" id="RA2-0X-UBE"/>
+                        <outlet property="genreLabel" destination="tbm-ul-GGK" id="0Am-Rv-jvq"/>
                         <outlet property="resultImage" destination="cqc-69-wRI" id="d1I-Ia-11D"/>
                         <outlet property="success" destination="vK8-iK-QyI" id="ZE5-4J-3xx"/>
                     </connections>
@@ -308,8 +309,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Placez le code barre au milieu de l'écran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCP-qf-Veh">
-                                <rect key="frame" x="53.5" y="0.0" width="307" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placez le code barre au milieu de l'écran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCP-qf-Veh">
+                                <rect key="frame" x="53.5" y="1" width="307" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2gl-bP-Df1"/>
                                 </constraints>
@@ -328,6 +329,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oCP-qf-Veh" firstAttribute="centerX" secondItem="1AE-Su-aEF" secondAttribute="centerX" id="cDu-dN-VWP"/>
+                            <constraint firstItem="oCP-qf-Veh" firstAttribute="centerY" secondItem="1AE-Su-aEF" secondAttribute="centerY" constant="-400" id="io8-qC-WFu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KnU-fU-fqq"/>
                     </view>
@@ -351,9 +353,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8so-e2-nc5">
-                                <rect key="frame" x="18" y="44" width="79" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8so-e2-nc5">
+                                <rect key="frame" x="20" y="44" width="79" height="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title=" Retour" image="arrow.left" catalog="system"/>
                                 <connections>
@@ -428,7 +429,6 @@
                                 <rect key="frame" x="145" y="620" width="124" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="MEE-BY-66Q"/>
-                                    <constraint firstAttribute="width" constant="124" id="n49-OM-AT0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title=" Ajouter" image="plus.rectangle" catalog="system"/>
@@ -444,6 +444,7 @@
                             <constraint firstItem="Ii4-Zq-onR" firstAttribute="centerX" secondItem="598-K5-RNk" secondAttribute="centerX" id="4gx-eT-mlQ"/>
                             <constraint firstItem="sMx-Ek-xY6" firstAttribute="centerY" secondItem="598-K5-RNk" secondAttribute="centerY" constant="-320" id="7TH-s6-f2a"/>
                             <constraint firstItem="jkZ-ua-MC4" firstAttribute="centerX" secondItem="598-K5-RNk" secondAttribute="centerX" constant="10" id="A0Z-n9-vih"/>
+                            <constraint firstItem="8so-e2-nc5" firstAttribute="centerX" secondItem="598-K5-RNk" secondAttribute="centerX" constant="-147.5" id="CQn-0E-LDE"/>
                             <constraint firstItem="Udv-1H-HBq" firstAttribute="centerY" secondItem="598-K5-RNk" secondAttribute="centerY" id="G0Q-IP-5S4"/>
                             <constraint firstItem="ZQX-d7-4bs" firstAttribute="centerX" secondItem="598-K5-RNk" secondAttribute="centerX" id="JzX-2A-6eZ"/>
                             <constraint firstItem="n6M-3Y-E5Z" firstAttribute="centerX" secondItem="598-K5-RNk" secondAttribute="centerX" id="LD6-p9-1LP"/>
@@ -459,6 +460,7 @@
                             <constraint firstItem="jkZ-ua-MC4" firstAttribute="centerY" secondItem="598-K5-RNk" secondAttribute="centerY" constant="-320" id="hgq-D3-c4x"/>
                             <constraint firstItem="rQF-fS-JrK" firstAttribute="centerY" secondItem="598-K5-RNk" secondAttribute="centerY" constant="-120.5" id="r6J-jc-QnG"/>
                             <constraint firstItem="n6M-3Y-E5Z" firstAttribute="centerY" secondItem="598-K5-RNk" secondAttribute="centerY" constant="190" id="rc4-Qm-8fZ"/>
+                            <constraint firstItem="8so-e2-nc5" firstAttribute="centerY" secondItem="598-K5-RNk" secondAttribute="centerY" constant="-393" id="v9p-p3-wgL"/>
                             <constraint firstItem="s2r-WB-SEh" firstAttribute="centerX" secondItem="598-K5-RNk" secondAttribute="centerX" constant="-40" id="zYZ-XB-wxn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P07-sg-b6e"/>

@@ -5,7 +5,7 @@
 //  Created by David Latil on 28/10/2019.
 //  Copyright © 2019 David Latil. All rights reserved.
 //
-// Inspired from : https://www.hackingwithswift.com/example-code/media/how-to-scan-a-barcode by Paul Hudson
+//  Inspired from : https://www.hackingwithswift.com/example-code/media/how-to-scan-a-barcode by Paul Hudson
 
 import AVFoundation
 import UIKit

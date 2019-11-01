@@ -18,9 +18,10 @@ class ResultPageController:UIViewController {
     @IBOutlet weak var foundLabel: UILabel!
     @IBOutlet weak var success: UIImageView!
     @IBOutlet weak var resultImage: UIImageView!
-    @IBOutlet weak var album: UILabel!
-    @IBOutlet weak var artist: UILabel!
-    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var albumLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    
     
     override func viewDidLoad() {
         var returnedAlbum : Album
@@ -28,15 +29,15 @@ class ResultPageController:UIViewController {
         
         if !found {
             foundLabel.text="Album introuvable"
-            album.text="Vous pouvez l'ajouter"
-            artist.text="via le menu principal"
-            genre.text=""
+            albumLabel.text="Vous pouvez l'ajouter"
+            artistLabel.text="via le menu principal"
+            genreLabel.text=""
             success.isHidden=true
         } else {
             resultImage.isHidden=true
-            artist.text=returnedAlbum.artist
-            album.text=returnedAlbum.name
-            genre.text=returnedAlbum.genre
+            artistLabel.text=returnedAlbum.artist
+            albumLabel.text=returnedAlbum.name
+            genreLabel.text=returnedAlbum.genre
         }
     }
 }
